@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=h2, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <title>Register Artist</title>
+        
+    </head>
+    <body>
+        <form action="register_artist_processing.jsp">
+            <h1>Fill Up Artist Information</h1><br>
+            First Name: <input type="text" id="first_name" name="first_name"><br><br>
+            Last Name: <input type="text" id="last_name" name="last_name"><br><br>
+            Email: <input type="text" id="email" name="email"><br><br>
+            Manager: <select id="manager_id" name="manager_id">
+                <option value=1000001>Serana Lawson</option>
+                <option value=1000002>Xavier Bennett</option>
+                <option value=1000003>Mia Chambers</option>
+                <option value=1000004>Donovan	Hayes</option>
+                <option value=1000005>Jasmine	Harper</option>
+                <option value=1000006>Nolan Mitchell</option>
+                <option value=1000007>Isabella Parker</option>
+                <option value=1000008>Lucas Sullivan</option>
+                <option value=1000009>Ava Anderson</option>
+                <option value=1000010>Nathan Carter</option>
+            </select><br><br>
+            Rate: <input type="number" id="artist_rate" name="artist_rate"><br><br>
+            <input type="submit" value="Submit">    
+        </form>
+    </body>
+</html>

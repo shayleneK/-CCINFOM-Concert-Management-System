@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateForm() {
+            var logisticType = document.getElementById("logistic_type").value;
+            var description = document.getElementById("description").value;
+            var supplierID = document.getElementById("supplier_ID").value;
+            var rentalPrice = document.getElementById("rental_price").value;
+            var status = document.getElementById("status").value;
+
+            if (logisticType === "" || description === "" || supplierID === "" || rentalPrice === "" || status === "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form action="registerlogistics.jsp" method="post" onsubmit="return validateForm()">
+        <select id="logistic_type" name="logistic_type">
+            <option value="SPEAKER">Speakers</option>
+            <option value="MICROPHONE">Microphone</option>
+            <option value="LIGHTS">Lights</option>
+            <option value="PROJECTORS">Projectors</option>
+            <option value="CAMERAS">Cameras</option>
+            <option value="BAND">Bands</option>
+            <option value="INSTRUMENTS">Instruments</option>
+            <option value="DANCERS">Dancers</option>
+            <option value="VOCALISTS">Vocalists</option>
+        </select>
+        <input type="text" id="description" name ="description" placeholder="description">
+        <input type="text" id="supplier_ID" name= "supplier_ID" placeholder="supplier ID">
+        <input type="text" id="rental_price" name="rental_price" placeholder="price">
+        <select name="status" id="status">
+            <option value="A">Available</option>
+            <option value="NA">Not Available</option>
+        </select>
+
+        <!-- create a dropdown list -->
+
+        <input type="submit" value="Add Equipment">
+    </form>
+</body>
+</html>
